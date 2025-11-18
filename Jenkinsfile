@@ -12,7 +12,7 @@ pipeline {
         stage('Deploy via Ansible') {
             steps {
                 sh '''
-                     ssh -o StrictHostKeyChecking=no root@<ANSIBLE-MASTER-IP> \
+                     ssh -o StrictHostKeyChecking=no root@3.87.94.56 \
                      "ansible-playbook /etc/ansible/deploy.yml"
                    '''
 
